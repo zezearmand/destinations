@@ -1,0 +1,280 @@
+/* Styles globaux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    color: white;
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.header-top .logo {
+    max-width: 100px;
+    height: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.cta-button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+    transform: scale(1.1);
+}
+
+.header-content {
+    text-align: center;
+    padding: 40px 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 3.5em;
+    margin: 0;
+    animation: slideDown 1s ease-out;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.header-nav a {
+    color: white;
+    padding: 10px 25px;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.header-nav a:hover {
+    background-color: white;
+    color: #333;
+    transform: scale(1.1);
+}
+
+/* Cartes des destinations */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    flex: 1 1 calc(45% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.destination-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    z-index: 0;
+}
+
+.image-container {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.content h3 {
+    margin: 0 0 10px;
+    font-size: 1.8em;
+    color: #0066ff;
+}
+
+.content p {
+    margin: 0;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #003d99;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-logo h3 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 0.9em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff6600;
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #ccc;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Vidéo dans le header */
+.video-header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    overflow: hidden;
+}
+
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* La vidéo couvre tout le header */
+    z-index: 0;
+}
+
+
+
+.header-overlay h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.header-overlay p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+
+
+
+.explore-btn:hover {
+    background-color: #e65c00;
+    transform: scale(1.1);
+}
+
+

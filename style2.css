@@ -1,0 +1,183 @@
+/* Import de la police */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+
+.dynamic-header h1 {
+    font-size: 3.5em;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.dynamic-header p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.explore-btn {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff8c00, #ff4500);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1em;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: linear-gradient(45deg, #ff6600, #e63900);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section galerie */
+.image-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #fff, #e0f7fa);
+}
+
+.section-title {
+    font-size: 2.8em;
+    color: #00796b;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.image-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.image-item p {
+    padding: 10px;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content a {
+    color: #ff9800;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #ffc107;
+}
+
+/* Animation du dégradé de fond */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header avec un fond dynamique et coloré */
+.dynamic-header {
+    background: linear-gradient(45deg, #ed597e, #a9e4ec, #33bcf7, #3f3cdf);
+    background-size: 400% 400%; /* Création de l'animation de fond */
+    height: 50vh; /* Hauteur réduite du header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    animation: gradientAnimation 15s ease infinite; /* Animation du dégradé */
+}
+
+
+
+
+
+/* Titre du header */
+.dynamic-header h1 {
+    font-size: 2.8em; /* Taille réduite du titre */
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Texte du header */
+.dynamic-header p {
+    font-size: 1.2em; /* Taille réduite du texte */
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Bouton d'exploration */
+.explore-btn {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff8c00, #ff4500);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.explore-btn:hover {
+    background: linear-gradient(45deg, #ff6600, #e63900);
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+}
+
